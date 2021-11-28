@@ -785,7 +785,7 @@ async def stream_from_link(link):
 
 
 async def get_link(file):
-    ytdl_cmd = [ "yt-dlp", "--geo-bypass", "-g", "-f", "best[height<=?720][width<=?1280]/best", file]
+    ytdl_cmd = [ "yt-dlp", "--geo-bypass", "-g", "-f", "b[height<=480]/b[height<=360]/b[height<=240]/w", file]
     process = await asyncio.create_subprocess_exec(
         *ytdl_cmd, stdout=asyncio.subprocess.PIPE, stderr=asyncio.subprocess.PIPE
     )
