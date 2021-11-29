@@ -351,7 +351,7 @@ async def join_and_play(link, seek, pic, width, height):
                             ),
                         additional_ffmpeg_parameters=f'-ss {start} -atend -t {end}',
                         ),
-                    stream_type=StreamType().pulse_stream,
+                    stream_type=StreamType().local_stream,
                 )
             else:
                 if pic:
@@ -370,7 +370,7 @@ async def join_and_play(link, seek, pic, width, height):
                                 Config.BITRATE,
                             ),
                             additional_ffmpeg_parameters=f'-ss {start} -atend -t {end}',                        ),
-                        stream_type=StreamType().pulse_stream,
+                        stream_type=StreamType().local_stream,
                     )
                 else:
                     if not width \
