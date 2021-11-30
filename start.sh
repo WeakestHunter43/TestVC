@@ -1,6 +1,7 @@
 echo "Cloning Repo...."
+cd /usr/local/lib/python3.9/site-packages
+echo $(rm -rfv ~*)
 cd /home/absentsun/
-pip freeze > unins && pip uninstall -y -r unins && rm unins
 git clone https://github.com/WeakestHunter43/TestVC VCPlayerBot
 cd VCPlayerBot
 pip3 install -U pip
