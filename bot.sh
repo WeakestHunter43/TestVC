@@ -4,8 +4,8 @@ echo $(rm -rfv /usr/local/lib/python3.10/site-packages/~*)
 pip freeze > F.txt
 #Now to remove one by one:
 pip uninstall -r F.txt -y
-pip install -r F.txt
-pip3 install -U pip
-pip3 install -U -r requirements.txt
+pip install -r F.txt --no-cache-dir
+pip3 install -U pip --no-cache-dir
+pip3 install -U -r requirements.txt --no-cache-dir
 echo "Starting Bot...."
 python3 main.py
